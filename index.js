@@ -443,5 +443,10 @@ io.on('connection', (socket) => {
   });
 });
 
-// Export for Vercel Serverless
+// Start server for Railway/traditional hosting
+httpServer.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
+// Export for Vercel Serverless (if needed)
 export default app;
